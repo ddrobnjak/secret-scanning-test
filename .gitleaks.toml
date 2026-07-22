@@ -1,8 +1,13 @@
-title = "Gitleaks Regex & Entropy"
+# .gitleaks.toml
+title = "Gitleaks Config"
+
+# CRITICAL: Keep default rules (AWS, GitHub tokens, Stripe, etc.)
+[extend]
+useDefault = true
 
 [[rules]]
 id = "generic-secret"
 description = "Flag secrets with Shannon entropy >= 3.5"
 regex = '''(?i)(secret|token|key|password)\s*[:=]\s*['"]?([a-zA-Z0-9_\-\+\/=]{16,})['"]?'''
 secretGroup = 2
-entropy = 3.5  # Shannon entropy threshold
+entropy = 3.5
