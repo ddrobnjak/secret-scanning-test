@@ -1,0 +1,11 @@
+title = "Betterleaks Regex & Token Efficiency"
+
+# Filters out strings that tokenize efficiently (natural language, sequential IDs)
+filter = '''
+filter.failsTokenEfficiency(finding["secret"])
+'''
+
+[[rules]]
+id = "generic-secret"
+description = "Flag secrets failing token efficiency checks"
+regex = '''(?i)(secret|token|key|password)\s*[:=]\s*['"]?([a-zA-Z0-9_\-\+\/=]{16,})['"]?'''
