@@ -1,0 +1,35 @@
+# ==============================================================================
+# TEST SECRETS FOR GITLEAKS & BETTERLEAKS COMPARISON
+# File Name: text
+# ==============================================================================
+
+# --- 1. VENDOR-SPECIFIC API KEYS (Regex Pattern Tests) ---
+GITHUB_TOKEN="ghp_1234567890abcdefghijklmnopqrstuvwxyz"
+AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
+AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+STRIPE_KEY="sk_test_51Mz1234567890abcdefghijklmnopqrstuvwxyz123456"
+OPENAI_API_KEY="sk-proj-abc123xyz456789012345678901234567890123456789012"
+SLACK_WEBHOOK="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
+
+# --- 2. DATABASE CONNECTION STRINGS ---
+DATABASE_URL="postgres://admin:P%40ssw0rd!2026@db.internal.net:5432/production"
+MONGO_URI="mongodb+srv://dbuser:SecretPass123!@cluster0.example.mongodb.net/app"
+REDIS_URL="redis://:eY3pL8vR2qZ9xM4wP7A1@cache.internal:6379/0"
+
+# --- 3. ENTROPY & TOKEN EFFICIENCY TESTS ---
+# High Entropy (Should be FLAGGED by both tools)
+HIGH_ENTROPY_TOKEN="8f9a2b5c7d1e0f3a4b6c8d9e0f1a2b3c4d5e6f7a"
+BASE64_SECRET="a3ZnTDFwOW1SOHZrTDI5c1B3TzA5OTBs"
+
+# Low Entropy (Should be IGNORED by entropy/token efficiency filters)
+LOW_ENTROPY_KEY="123456789012345678901234567890"
+REPETITIVE_KEY="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+
+# --- 4. PRIVATE KEYS & CERTIFICATES ---
+RSA_KEY="-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA0...\n-----END RSA PRIVATE KEY-----"
+PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIN...\n-----END PRIVATE KEY-----"
+
+# --- 5. FALSE POSITIVE BASELINE (Negative Controls) ---
+WELCOME_MESSAGE="Welcome to our secure internal system application."
+COMMIT_HASH="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+API_HOST="https://api.example.com/v1"
