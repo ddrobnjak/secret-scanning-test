@@ -4,32 +4,32 @@
 # ==============================================================================
 
 # --- 1. VENDOR-SPECIFIC API KEYS (Regex Pattern Tests) ---
-GITHUB_TOKEN="ghp_1234567890abcdefghijklmnopqrstuvwxyz"
-AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
-AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
-STRIPE_KEY="sk_test_51Mz1234567890abcdefghijklmnopqrstuvwxyz123456"
-OPENAI_API_KEY="sk-proj-abc123xyz456789012345678901234567890123456789012"
-SLACK_WEBHOOK="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
+GITHUB_TOKEN="ghp_7kL9m2N8p4Q1r5S3t6U0v8W2x4Y6z1A9b3C5"
+AWS_ACCESS_KEY_ID="AKIA5G8H3J1K9L2M4N6P"
+AWS_SECRET_ACCESS_KEY="7x8Y9z0A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q"
+STRIPE_KEY="sk_test_51Oq9876543210abcdefghijklmnopqrstuvwxyz00"
+OPENAI_API_KEY="sk-proj-7a8b9c0d1e2f3g4h5i6j7k8l9m0n1o2p3q4r5s6t7u8v9w0x"
+SLACK_WEBHOOK="https://hooks.slack.com/services/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"
 
 # --- 2. DATABASE CONNECTION STRINGS ---
-DATABASE_URL="postgres://admin:P%40ssw0rd!2026@db.internal.net:5432/production"
-MONGO_URI="mongodb+srv://dbuser:SecretPass123!@cluster0.example.mongodb.net/app"
-REDIS_URL="redis://:eY3pL8vR2qZ9xM4wP7A1@cache.internal:6379/0"
+DATABASE_URL="postgres://db_user:K9%23mP0%24vQ1%21xZ@pg-cluster.internal:5432/app_db"
+MONGO_URI="mongodb+srv://app_admin:SecurePass2026%21@cluster1.d4e5f.mongodb.net/prod"
+REDIS_URL="redis://:x8M2n9P4q1W7v3Z0k5A9@redis-node.internal:6379/1"
 
 # --- 3. ENTROPY & TOKEN EFFICIENCY TESTS ---
 # High Entropy (Should be FLAGGED by both tools)
-HIGH_ENTROPY_TOKEN="8f9a2b5c7d1e0f3a4b6c8d9e0f1a2b3c4d5e6f7a"
-BASE64_SECRET="a3ZnTDFwOW1SOHZrTDI5c1B3TzA5OTBs"
+HIGH_ENTROPY_TOKEN="e4d3c2b1a0f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5"
+BASE64_SECRET="YmFzZTY0X3NlY3JldF90ZXN0X3N0cmluZ18yMDI2"
 
 # Low Entropy (Should be IGNORED by entropy/token efficiency filters)
-LOW_ENTROPY_KEY="123456789012345678901234567890"
-REPETITIVE_KEY="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+LOW_ENTROPY_KEY="987654321098765432109876543210"
+REPETITIVE_KEY="ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"
 
 # --- 4. PRIVATE KEYS & CERTIFICATES ---
-RSA_KEY="-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA0...\n-----END RSA PRIVATE KEY-----"
-PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIN...\n-----END PRIVATE KEY-----"
+RSA_KEY="-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEA0x9...\n-----END RSA PRIVATE KEY-----"
+PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMC4CAQAwBQYDK2VwBCIEIK7...\n-----END PRIVATE KEY-----"
 
 # --- 5. FALSE POSITIVE BASELINE (Negative Controls) ---
-WELCOME_MESSAGE="Welcome to our secure internal system application."
-COMMIT_HASH="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-API_HOST="https://api.example.com/v1"
+WELCOME_MESSAGE="The automated deployment completed successfully without warnings."
+COMMIT_HASH="f0e4d3c2b1a09876543210fedcba9876543210fedcba9876543210fedcba987"
+API_HOST="https://api.v2.services.internal/health"
