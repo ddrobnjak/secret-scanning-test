@@ -1,11 +1,10 @@
-title = "Betterleaks Regex & Token Efficiency"
+title = "Betterleaks Config"
 
-# Filters out strings that tokenize efficiently (natural language, sequential IDs)
+# 1. Inherit all built-in rules (AWS, GitHub, Stripe, OpenAI, DB strings, etc.)
+[extend]
+useDefault = true
+
+# 2. DISCARD findings if they DO NOT fail token efficiency (i.e., ignore natural language / human text)
 filter = '''
-filter.failsTokenEfficiency(finding["secret"])
+!filter.failsTokenEfficiency(finding["secret"])
 '''
-
-[[rules]]
-id = "generic-secret"
-description = "Flag secrets failing token efficiency checks"
-regex = '''(?i)(secret|token|key|password)\s*[:=]\s*['"]?([a-zA-Z0-9_\-\+\/=]{16,})['"]?'''
